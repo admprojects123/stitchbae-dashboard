@@ -135,19 +135,19 @@ const ProductPage = () => {
                 className={category === "Wardrobe" ? "active" : ""}
                 onClick={() => handleCategoryChange("Wardrobe")}
               >
-                Wardrobe
+                Men
               </button>
               <button
                 className={category === "Occasion Wear" ? "active" : ""}
                 onClick={() => handleCategoryChange("Occasion Wear")}
               >
-                Occasion Wear
+                Women
               </button>
               <button
                 className={category === "Casual Wear" ? "active" : ""}
                 onClick={() => handleCategoryChange("Casual Wear")}
               >
-                Casual Wear
+                Other
               </button>
             </div>
           </header>
