@@ -50,7 +50,7 @@ const AddBanner = () => {
             setImagePreview(null);
 
             // Refresh banners
-            const updatedBanners = await axios.get('https://clickmeal-backend.vercel.app/user/get-banner');
+            const updatedBanners = await axios.get('https://stitch-commerce-admaya.vercel.app/user/get-banner');
             setCurrentBanners(updatedBanners.data.banners);
         } catch (error) {
             console.error('Error adding banner:', error);

@@ -11,7 +11,7 @@ function ExchangeList() {
 
   useEffect(() => {
     axios
-      .get("https://clouthing-ecommerce-backend.vercel.app/user/listExchange")
+      .get("https://stitch-commerce-admaya.vercel.app/user/listExchange")
       .then((response) => {
         if (response.data && response.data.exchanges) {
           setOrders(response.data.exchanges);

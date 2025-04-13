@@ -20,7 +20,7 @@ function OrdersList() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("https://clouthing-ecommerce-backend.vercel.app/user/order-list");
+        const response = await axios.get("https://stitch-commerce-admaya.vercel.app/user/order-list");
         if (response.data.success) {
           const formattedOrders = response.data.data.map(order => ({
             id: order.orderId,
@@ -82,7 +82,7 @@ function OrdersList() {
   const handlePopupSubmit = async () => {
     try {
       // Log the request payload and URL
-      console.log("Request URL:", `https://clouthing-ecommerce-backend.vercel.app/user/update-order/${currentOrderId}`);
+      console.log("Request URL:", `https://stitch-commerce-admaya.vercel.app/user/update-order/${currentOrderId}`);
       console.log("Request Payload:", {
         orderStatus: "ontheway",
         courierName,
@@ -92,7 +92,7 @@ function OrdersList() {
 
       // Send PUT request to update order status
       const response = await axios.put(
-        `https://clouthing-ecommerce-backend.vercel.app/user/update-order/${currentOrderId}`,
+        `https://stitch-commerce-admaya.vercel.app/user/update-order/${currentOrderId}`,
         {
           orderStatus: "ontheway",
           courierName,
@@ -138,7 +138,7 @@ function OrdersList() {
     try {
       // Send PUT request to update order status to "delivered"
       const response = await axios.put(
-        `https://clouthing-ecommerce-backend.vercel.app/user/update-order/${currentOrderId}`,
+        `https://stitch-commerce-admaya.vercel.app/user/update-order/${currentOrderId}`,
         {
           orderStatus: "delivered",
         }

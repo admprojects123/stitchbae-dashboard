@@ -20,7 +20,7 @@ const CouponList = () => {
 
     // Fetch coupons from the new API
     useEffect(() => {
-        fetch('https://clouthing-ecommerce-backend.vercel.app/coupon/listCoupons')
+        fetch('https://stitch-commerce-admaya.vercel.app/coupon/listCoupons')
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
@@ -37,7 +37,7 @@ const CouponList = () => {
 
     const handleDeleteCoupon = async (couponId) => {
         try {
-            const response = await fetch(`https://clouthing-ecommerce-backend.vercel.app/coupon/deleteCoupon?id=${couponId}`, {
+            const response = await fetch(`https://stitch-commerce-admaya.vercel.app/coupon/deleteCoupon?id=${couponId}`, {
                 method: 'DELETE',
             });
             const result = await response.json();
@@ -58,7 +58,7 @@ const CouponList = () => {
     const handleAddCoupon = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://clouthing-ecommerce-backend.vercel.app/coupon/addCoupon', {
+            const response = await axios.post('https://stitch-commerce-admaya.vercel.app/coupon/addCoupon', {
                 name: formData.name,
                 limit: parseInt(formData.limit, 10), // Ensure limit is a number
                 description: formData.description,
@@ -74,7 +74,7 @@ const CouponList = () => {
                     expiryDate: ''
                 });
                 // Refresh the coupon list
-                fetch('https://clouthing-ecommerce-backend.vercel.app/coupon/listCoupons')
+                fetch('https://stitch-commerce-admaya.vercel.app/coupon/listCoupons')
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {

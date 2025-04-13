@@ -18,7 +18,7 @@ const CompanyList = () => {
 
     useEffect(() => {
         // Fetch the list of companies
-        axios.get('https://clouthing-ecommerce-backend.vercel.app/user/list')
+        axios.get('https://stitch-commerce-admaya.vercel.app/user/list')
             .then((response) => {
                 if (response.data.message === 'Users fetched successfully') {
                     setCompanies(response.data.users || []); // Ensure the data is always an array
@@ -60,7 +60,7 @@ const CompanyList = () => {
     // Fetch user details when a company row is clicked
     const handleViewDetails = async (company) => {
         try {
-            const response = await axios.get(`https://clouthing-ecommerce-backend.vercel.app/user/details/${company._id}`);
+            const response = await axios.get(`https://stitch-commerce-admaya.vercel.app/user/details/${company._id}`);
             console.log('API Response:', response.data);  // Log the response to ensure it's correct
             setSelectedCompany(response.data);
         } catch (error) {

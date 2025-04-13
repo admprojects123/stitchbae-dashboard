@@ -21,7 +21,7 @@ const ProductPage = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "https://clouthing-ecommerce-backend.vercel.app/dashboard/listProducts"
+          "https://stitch-commerce-admaya.vercel.app/dashboard/listProducts"
         );
         if (response.data && response.data.data && response.data.data.products) {
           setProducts(response.data.data.products);
@@ -87,7 +87,7 @@ const ProductPage = () => {
 
     try {
       const response = await axios.post(
-        "https://clouthing-ecommerce-backend.onrender.com/product/addProduct",
+        "https://stitch-commerce-admaya.vercel.app/product/addProduct",
         formData,
         {
           headers: {

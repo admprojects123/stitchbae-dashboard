@@ -10,7 +10,7 @@ function FeedbackList() {
   // Function to fetch feedback data from the API
   const fetchFeedbacks = async () => {
     try {
-      const response = await axios.get('https://clouthing-ecommerce-backend.vercel.app/user/getContactUs');
+      const response = await axios.get('https://stitch-commerce-admaya.vercel.app/user/getContactUs');
       if (response.data.success) {
         setFeedbacks(response.data.messages);
       } else {
