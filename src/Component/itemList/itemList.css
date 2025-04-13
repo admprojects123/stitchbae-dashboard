@@ -1,0 +1,133 @@
+.itemList-container {
+  
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.itemList-tableContainer {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.itemList-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.itemList-topBar {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.itemList-searchInput,
+.itemList-filterSelect {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.itemList-searchInput{
+  width: 100%;
+}
+
+.itemList-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.itemList-table th,
+.itemList-table td {
+  background-color: transparent;
+  text-align: left;
+  border-bottom: 1px solid #ddddddb6;
+  padding: 12px;
+}
+
+.itemList-table th {
+  font-weight: 600;
+}
+
+.itemList-itemImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.veg {
+  color: green;
+  font-weight: bold;
+}
+
+.nonVeg {
+  color: red;
+  font-weight: bold;
+}
+
+.itemList-actionIcons {
+  display: flex;
+  height: 87px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.itemList-editBtn,
+.itemList-deleteBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.itemList-message {
+  margin-bottom: 15px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.itemList-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemList-popupContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.itemList-popupActions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.itemList-popupActions button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.itemList-popupActions button:first-child {
+  background-color: #ccc;
+}
+
+.itemList-popupActions button:last-child {
+  background-color: red;
+  color: white;
+}

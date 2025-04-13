@@ -1,0 +1,139 @@
+.ExtraItemList-container {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ExtraItemList-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.ExtraItemList-tableContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.ExtraItemList-topBar {
+    margin-bottom: 20px;
+}
+
+.ExtraItemList-searchInput {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.ExtraItemList-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ExtraItemList-table th,
+.ExtraItemList-table td {
+    background-color: transparent;
+    text-align: left;
+    border-bottom: 1px solid #ddddddb6;
+    padding: 12px;
+}
+
+.ExtraItemList-table th {
+    font-weight: 600;
+}
+
+.ExtraItemList-itemImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.ExtraItemList-actionIcons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExtraItemList-editBtn,
+.ExtraItemList-deleteBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ExtraItemList-message {
+    margin-bottom: 15px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ExtraItemList-noData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.ExtraItemList-noDataContent {
+    color: #666;
+    font-family: Arial, sans-serif;
+}
+
+.ExtraItemList-noDataContent h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ExtraItemList-noDataContent p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.ExtraItemList-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ExtraItemList-popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ExtraItemList-popupActions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ExtraItemList-popupActions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ExtraItemList-popupActions button:first-child {
+    background-color: #ccc;
+}
+
+.ExtraItemList-popupActions button:last-child {
+    background-color: red;
+    color: white;
+}

@@ -1,0 +1,9 @@
+.spot-price-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.spot-price-container h2, .spot-price-container h3 {
+    margin-bottom: 20px;
+}

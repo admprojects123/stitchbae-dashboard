@@ -1,0 +1,129 @@
+/* addSubcategory.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.addSubcategory-container {
+    
+    padding: 20px;
+}
+
+.addSubcategory-title {
+    font-size: 24px;
+    font-weight: 600;
+   
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.addSubcategory-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.addSubcategory-left, .addSubcategory-right {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Radio button group */
+.addSubcategory-radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.addSubcategory-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.addSubcategory-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+.addSubcategory-fileUpload label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.addSubcategory-fileUpload input {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.addSubcategory-imagePreview {
+    margin-top: 10px;
+
+}
+
+.addSubcategory-imagePreview img {
+    max-width: 100px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.addSubcategory-submitBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.addSubcategory-submitBtn:hover {
+    background-color: #45a049;
+}
+
+.addSubcategory-successPopup {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+}

@@ -1,0 +1,111 @@
+/* Card Container */
+.dash-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 14px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 28%;
+  flex: 1;
+ /* Added margin to separate the cards */
+}
+
+/* Card Content */
+.dash-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0px;
+  text-overflow: ellipsis ;
+  
+}
+.card-space{
+  width: 50px;
+}
+
+/* Card Header */
+.card-header {
+  font-size: 14px;
+  color: #737373;
+  margin-bottom: 10px;
+  border: 1px soli red;
+  width: 60px;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  /* align-items: flex-start */
+}
+
+.highlight {
+  /* Color is set dynamically via inline styles */
+}
+
+/* Card Body */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 35px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 25%;
+}
+
+.user-count {
+  font-size: 48px;
+  margin-right: 20px;
+  color: #000000;
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.percentage.positive {
+  background-color: #e6ffe6;
+  color: #00B74A; /* Green for positive growth */
+}
+
+.percentage.negative {
+  background-color: #ffe6e6;
+  color: #ff3b3b; /* Red for negative growth */
+}
+
+.arrow {
+  font-weight: bold;
+}
+
+.percentage-text {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.subtext {
+  color: #000000;
+  font-size: 12px;
+}
+
+/* Graph */
+.graph {
+  /* margin-left: auto; */
+}
+
+svg {
+  display: block;
+}
+.user-count{
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0px;
+  padding-right: 10px;
+}

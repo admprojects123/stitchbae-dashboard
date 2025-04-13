@@ -1,0 +1,347 @@
+/* General Container Styling */
+.exchange-ordersList-container {
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Header Styling */
+  .exchange-ordersList h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Tabs Styling */
+  .exchange-ordertabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .exchange-ordertabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exchange-ordertabs button:hover {
+    background-color: #ddd;
+  }
+  
+  .exchange-ordertabs .exchange-active {
+    border-bottom: 2px solid #DA231D;
+    color: #DA231D;
+    background: transparent;
+  }
+  
+  /* Search Input Styling */
+  .exchange-orderproductsearchbutton {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+  }
+  
+  /* Table Styling */
+  .exchange-ordersList-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+  }
+  
+  .exchange-ordersList-table th,
+  .exchange-ordersList-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #D9D9D9;
+    text-align: left;
+  }
+  
+  .exchange-ordersList-table th {
+    background-color: #FFFFFF;
+    font-weight: 300;
+    font-size: 13px;
+    border-radius: 10px;
+    color: #8B909A;
+  }
+  
+  /* Delete Button Styling */
+  .exchange-deleteButton {
+    background-color: transparent;
+    color: #DA231D;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exchange-deleteButton:hover {
+
+  }
+  
+  /* Tracking Input Styling */
+  .exchange-trackingInput {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Order Details Container */
+  .exchange-orderDetails-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Order Details Header */
+  .exchange-orderDetails-header {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Order Details Body Layout */
+  .exchange-orderDetails-body {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Items Section */
+  .exchange-orderDetails-items {
+    flex: 2;
+    background-color: #FFFFFF;
+  }
+  
+  .exchange-orderDetails-items table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .exchange-orderDetails-items th,
+  .exchange-orderDetails-items td {
+    padding: 12px;
+    border-bottom: 1px solid #D9D9D9;
+    text-align: left;
+  }
+  
+  /* Summary Section */
+  .exchange-orderDetails-summary {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .exchange-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .exchange-summary-total {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Sidebar Section */
+  .exchange-orderDetails-sidebar {
+    flex: 1;
+    padding: 20px;
+ 
+    border-radius: 8px;
+    background-color: #FFFFFF;
+  }
+  
+  .exchange-orderDetails-customer {
+    margin-bottom: 20px;
+  }
+  
+  .exchange-customer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .exchange-customer-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Shipping Info Styling */
+  .exchange-orderDetails-shipping {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  /* Back to Orders Button */
+  .exchange-backToOrdersButton {
+    font-size: 16px;
+    color: #279f51;
+    cursor: pointer;
+    transition: text-decoration 0.3s ease;
+  }
+  
+  .exchange-backToOrdersButton:hover {
+    text-decoration: underline;
+  }
+
+
+
+
+
+
+
+
+  .exchange-orderDetails-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .exchange-orderDetails-header {
+    background-color: #F8F9FA;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .exchange-orderDetails-body {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .exchange-orderDetails-items {
+    flex: 2;
+  }
+  
+  .exchange-orderDetails-sidebar {
+    flex: 1;
+  }
+  
+  .exchange-orderDetails-summary {
+    background-color: #F8F9FA;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .exchange-summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .exchange-summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .exchange-reason-section,
+  .exchange-description-section,
+  .exchange-new-size-section {
+    margin-top: 20px;
+  }
+  
+  .exchange-reason-section h3,
+  .exchange-description-section h3,
+  .exchange-new-size-section h3 {
+    color: #8B909A;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .exchange-reason-section p,
+  .exchange-description-section p,
+  .exchange-new-size-section p {
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+  }
+  
+  .exchange-customer-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .exchange-customer-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .exchange-orderDetails-shipping {
+    margin-top: 20px;
+  }
+  
+  .exchange-ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .exchange-ordertabs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .exchange-ordertabs button {
+    padding: 10px 20px;
+    border: none;
+   
+    cursor: pointer;
+  }
+  
+  .exchange-ordertabs .exchange-active {
+    border-bottom: 2px solid #DA231D;
+    color: #DA231D;
+    background: transparent;
+
+  }
+  
+  .exchange-orderproductsearchbutton {
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .exchange-ordersList-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .exchange-ordersList-table th,
+  .exchange-ordersList-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #E0E0E0;
+  }
+  
+  .exchange-ordersList-table th {
+    background-color: #F8F9FA;
+  }
+  
+  .exchange-deleteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #DA231D;
+  }
+  

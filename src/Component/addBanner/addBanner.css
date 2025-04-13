@@ -1,0 +1,151 @@
+/* addBanner.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.addBanner-container {
+ 
+    padding: 20px;
+}
+
+.addBanner-title {
+    font-size: 24px;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+    color: #1C2A53;
+}
+
+.addBanner-form {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.addBanner-left, .addBanner-right {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addBanner-input {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.addBanner-input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+.addBanner-fileUpload label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.addBanner-fileUpload input {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.addBanner-imagePreview {
+    margin-top: 10px;
+    
+   
+}
+
+.addBanner-imagePreview img {
+    max-width: 400px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.addBanner-submitBtn {
+    background-color: #DA231D;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.addBanner-submitBtn:hover {
+  
+}
+
+.addBanner-successPopup {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+
+.currentBanners-container {
+    margin-top: 40px;
+    /* height: 200px; */
+}
+
+.currentBanners-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.currentBanners-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.currentBanner-item {
+    flex: 1;
+    min-width: 200px;
+    /* max-height: 200px; */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.currentBanner-image {
+    max-width: 100%;
+    border-radius: 8px;
+}

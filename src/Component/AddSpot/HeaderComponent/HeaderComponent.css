@@ -1,0 +1,107 @@
+/* Container styles */
+.headercomponent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Tab container */
+.headercomponenttabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* Button styles */
+.headercomponenttab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f5f5f5; /* Default background */
+    border-radius: 25px;
+    color: #000000;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.headercomponenttab-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Active button (selected) */
+.headercomponenttab-button:focus, 
+.headercomponenttab-button.active {
+    background-color: #f2711c; /* Orange background for active state */
+    color: white;
+}
+
+/* Update button */
+.categoryupdate-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #f2711c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+/* Table container */
+.google-sheet-table {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Table styles */
+.google-sheet-table table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.google-sheet-table th, .google-sheet-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.google-sheet-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.google-sheet-table td {
+    text-align: left;
+}
+
+/* Heading section */
+.topheading-addspot {
+    text-align: left;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+/* Input field inside table cells */
+.google-sheet-table input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.mainheadingaddspot{
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-size: 19px;
+}

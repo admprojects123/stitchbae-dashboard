@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
+.product-page {
+  padding: 20px;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  color: #333;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tabs button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;   
+  cursor: pointer;
+  background: transparent;
+  color:#8B909A;
+  font-weight:400;
+}
+
+.tabs button.active {
+  background: transparent;   /* Remove background color */
+  color: #DA231D;            /* Change text color if desired */
+  border-bottom: 3px solid #DA231D;
+  font-weight: bold;  /* Add bottom border */
+}
+
+.search-add {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.productsearchbutton {
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.add-product-btn {
+  background: #DA231D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the product table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse; /* Cells should touch each other */
+  border-radius: 10px; /* Apply border radius to the whole table */
+  overflow: hidden; /* Ensures corners are rounded */
+}
+
+.product-table th,
+.product-table td {
+
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DBDADE;
+}
+
+.product-table th {
+  background-color: #F8F9FA;
+  color: #8B909A;
+  font-family: 'Public Sans', sans-serif;
+}
+
+.view-btn {
+  color: #000000;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.status.in-stock {
+  color: green;
+}
+
+.status.out-of-stock {
+  color: red;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.producttablehead {
+  background-color: #F8F9FA;
+  color: #8B909A;
+  font-family: 'Public Sans', sans-serif;
+}
+
+.add-product-modal {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Adjust the width and styling of the first column */
+.product-table th:first-child,
+.product-table td:first-child {
+
+  padding: 10px;
+}
+
+/* Styling for the product info in the first column */
+.product-info {
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  gap: 8px; /* Add space between image and text */
+}
+
+/* Product image styling */
+.product-image {
+  width: 40px; /* Set a fixed width for the image */
+  height: 40px; /* Set a fixed height for the image */
+  border-radius: 5px; /* Add rounded corners */
+  object-fit: contain; /* Ensure the image is properly scaled */
+}
+
+/* Product name styling */
+.product-name {
+  font-size: 14px; /* Set a smaller font size */
+  color: #333; /* Adjust text color */
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden; /* Clip text if it overflows */
+  text-overflow: ellipsis; /* Add "..." for overflowing text */
+}
+
+
+.product-details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: #1C2A53;
+}
+
+.product-details-basic {
+  grid-column: 1 / span 1;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.product-details-basic h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-details-basic p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.product-details-basic p span {
+  font-weight: bold;
+}
+
+.product-details-images {
+  grid-column: 2 / span 1;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  background-color: #FFFFFF;
+  padding: 15px;
+}
+
+.product-details-images img {
+  width:75%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+}
+
+.product-details-size-quantity {
+  grid-column: 1 / span 2;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.product-details-size-quantity h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.size-quantity-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.size-quantity-table th,
+.size-quantity-table td {
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.size-quantity-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #333;
+}
+
+.size-quantity-table td {
+  color: #555;
+}
+
+.size-quantity-table td.in-stock {
+  color: green;
+}
+
+.size-quantity-table td.out-of-stock {
+  color: red;
+}
+
+
+

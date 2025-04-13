@@ -1,0 +1,141 @@
+.deliveryOrders-container {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.deliveryOrders-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.deliveryOrders-topBar {
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+
+.deliveryOrders-dateInput {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.deliveryOrders-tableContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.deliveryOrders-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.deliveryOrders-table th,
+.deliveryOrders-table td {
+    text-align: left;
+    border-bottom: 1px solid #ddddddb6;
+    padding: 12px;
+}
+
+.deliveryOrders-table th {
+    font-weight: 600;
+}
+
+.deliveryOrders-exportBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deliveryOrders-exportBtn:hover {
+    background-color: #45a049;
+}
+
+.deliveryOrders-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deliveryOrders-popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.deliveryOrders-popupActions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.deliveryOrders-popupActions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deliveryOrders-popupActions button:first-child {
+    background-color: #ccc;
+}
+
+.deliveryOrders-popupActions button:last-child {
+    background-color: red;
+    color: white;
+}
+
+.deliveryOrders-noData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.deliveryOrders-noDataContent {
+    color: #666;
+    font-family: Arial, sans-serif;
+}
+
+.deliveryOrders-noDataContent h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.deliveryOrders-noDataContent p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+.deliveryOrders-statusSelect.ordered {
+    background-color: #ffeb3b; /* Yellow */
+    color: #000;
+  }
+  
+  .deliveryOrders-statusSelect.preparing {
+    background-color: #f57c00; /* Orange */
+    color: #fff;
+  }
+  
+  .deliveryOrders-statusSelect.delivered {
+    background-color: #4caf50; /* Green */
+    color: #fff;
+  }
+  

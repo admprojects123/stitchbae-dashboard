@@ -1,0 +1,48 @@
+/* Background setup */
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f7fb;
+}
+
+/* Card styling */
+.success-card {
+    background-color: white;
+    padding: 60px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon Styling */
+.success-icon {
+    background-color: #2f3dd4;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.checkmark {
+    color: white;
+    width: 40px;
+    height: 40px;
+}
+
+/* Text Styling */
+h1 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+}

@@ -1,0 +1,76 @@
+.warehouse-editor-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .warehouse-editor-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .warehouse-editor-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .warehouse-editor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .warehouse-editor-table th,
+  .warehouse-editor-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  .warehouse-editor-table th {
+    background-color: #e9ecef;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .warehouse-editor-input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 4px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  
+  .warehouse-editor-input:focus {
+    outline: none;
+    border-color: #ff7f50;
+    box-shadow: 0px 0px 4px rgba(255, 127, 80, 0.5);
+  }
+  
+  .warehouse-editor-submit-btn {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .warehouse-editor-submit-btn:hover {
+    background-color: #ff4500;
+  }
+  

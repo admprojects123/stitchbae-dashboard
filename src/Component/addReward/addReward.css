@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.addReward-container {
+    padding: 20px;
+}
+
+.addReward-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.addReward-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.addReward-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addReward-input, .addReward-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.addReward-input:focus, .addReward-textarea:focus, .addReward-dynamicInput input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+.addReward-textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.addReward-section {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.addReward-dynamicInput {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.addReward-dynamicInput input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.addReward-dynamicInput button {
+    padding: 8px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.addReward-dynamicInput button:hover {
+    background-color: #e1e1e1;
+}
+
+.addReward-fileUpload label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.addReward-fileUpload input {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.addReward-imagePreview {
+    margin-top: 10px;
+}
+
+.addReward-imagePreview img {
+    max-width: 100px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.addReward-submitBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.addReward-submitBtn:hover {
+    background-color: #45a049;
+}
+
+.addReward-successPopup {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+}

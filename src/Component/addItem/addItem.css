@@ -1,0 +1,190 @@
+/* addItem.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* addItem.css */
+
+/* addItem.css */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.addItem-container {
+   
+    padding: 20px;
+}
+
+.addItem-title {
+    font-size: 24px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.addItem-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.addItem-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addItem-input, .addItem-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.addItem-input:focus, .addItem-textarea:focus, .addItem-dynamicInput input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+
+.addItem-textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.addItem-radioGroup, .addItem-vegOptions {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.addItem-section {
+    /* background-color: #f9f9f9; */
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.addItem-dynamicInput {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.addItem-dynamicInput input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Button for adding and removing ingredients/nutritional info */
+.addItem-dynamicInput button {
+    padding: 8px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.addItem-dynamicInput button:hover {
+    background-color: #e1e1e1;
+}
+
+.addItem-fileUpload label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.addItem-fileUpload input {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    /* background-color: #f9f9f9; */
+}
+
+.addItem-imagePreview {
+    margin-top: 10px;
+   
+}
+
+.addItem-imagePreview img {
+    max-width: 100px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.addItem-submitBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.addItem-submitBtn:hover {
+    background-color: #45a049;
+}
+
+.addItem-successPopup {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+/* addItem.css */
+
+/* Ensure select dropdown matches input style */
+.addItem-input, .addItem-textarea, .addItem-input select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Focus state styling for consistency */
+.addItem-input:focus, .addItem-textarea:focus, .addItem-dynamicInput input:focus, .addItem-input select:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px rgba(76, 175, 80, 0.2);
+    outline: none;
+    background-color: #fff;
+}
+

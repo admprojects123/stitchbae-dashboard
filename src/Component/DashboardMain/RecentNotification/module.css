@@ -1,0 +1,40 @@
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  /* border-bottom: 1px solid #f0f0f0; */
+}
+
+.notification-avatar {
+  padding-right: 15px;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+}
+
+.notification-content {
+  flex-grow: 1;
+}
+
+.notification-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.notification-message {
+  color: #808080;
+  white-space: nowrap;       /* Prevents the text from wrapping */
+  overflow: hidden;          /* Hides any overflow content */
+  text-overflow: ellipsis;   /* Displays the ellipsis (...) for overflowing text */
+  max-width: 200px; 
+}
+
+.notification-time {
+  color: #050505;
+  white-space: nowrap;
+  font-size: 14px;
+}

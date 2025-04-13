@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.couponList-container {
+    padding: 20px;
+}
+
+.couponList-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #1C2A53;
+}
+
+.couponList-card {
+   
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.couponList-searchFilter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.couponList-searchInput,
+.couponList-dateInput {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.couponList-searchInput{
+    width: 20%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+.couponList-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.couponList-table th, .couponList-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eae6e6;
+    white-space: normal; /* Allow text wrapping */
+    word-wrap: break-word; /* Ensure long words break correctly */
+    max-width: 200px; /* Optional: control max-width to wrap text within the cell */
+}
+.couponList-table th {
+    font-weight: 400;
+    background-color: #F8F9FA;
+    color: #8B909A;
+}
+
+.couponList-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #23272E;
+}
+
+.couponList-action-img {
+    width: 20px;
+    height: 20px;
+}
+
+.couponList-editBtn,
+.couponList-deleteBtn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.status-active {
+    color: green;
+    font-weight: bold;
+}
+
+.status-expired {
+    color: red;
+}
+.couponList-message {
+    margin-bottom: 15px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.couponList-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.couponList-popupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.couponList-popupActions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.couponList-popupActions button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.couponList-popupActions button:first-child {
+    background-color: #ccc;
+}
+
+.couponList-popupActions button:last-child {
+    background-color: red;
+    color: white;
+}
+
+.flexgrpforbutton{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.addcouponbutton{
+    color: white;
+    background-color: #DA231D;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+
+
+}
+
+.titleaddcoupon{
+ display: flex;
+
+}
+
+/* Container for Add Coupon Page */
+.addCoupon-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Back Button */
+.backButton {
+    
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.backButton:hover {
+    
+}
+
+/* Page Title */
+.addCoupon-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.addCoupon-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    flex: 1 0 100%;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #5d9cec;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons Row */
+.buttons-row {
+    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Save Button */
+.saveButton {
+    background-color: #DA231D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+    background-color: #43a047;
+}
+
+
