@@ -27,8 +27,8 @@
 
 .tabs button.active {
   background: transparent;   /* Remove background color */
-  color: #DA231D;            /* Change text color if desired */
-  border-bottom: 3px solid #DA231D;
+  color: #802E00;            /* Change text color if desired */
+  border-bottom: 3px solid #802E00;
   font-weight: bold;  /* Add bottom border */
 }
 
@@ -46,7 +46,7 @@
 }
 
 .add-product-btn {
-  background: #DA231D;
+  background: #802E00;
   color: white;
   padding: 10px 20px;
   border: none;

@@ -19,7 +19,7 @@
 
 .sider-logo {
     width: 110px;
-    background-image: url("../../assets/finallogoiris.png");
+    background-image: url("../../assets/stitchlogo.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@ button.menu-item {
 }
 
 button.menu-item:hover {
-    color: #DA231D;
+    color: #802E00;
 }
 
 button.menu-item:focus {
@@ -105,7 +105,7 @@ button.menu-item:focus {
 
 .sidebar-menu li a.active,
 button.menu-item.active {
-    color: #DA231D;
+    color: #802E00;
     font-weight: bold;
 }
 

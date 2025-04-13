@@ -34,8 +34,8 @@ body {
   }
   
   .tab-button.active {
-    color: #DA231D;
-    border-bottom: 3px solid #DA231D;
+    color: #802E00;
+    border-bottom: 3px solid #802E00;
   }
   
   .ordersList-controls {
@@ -284,8 +284,8 @@ body {
 
 .ordertabs button.active {
   background: transparent;   /* Remove background color */
-  color: #DA231D;            /* Change text color if desired */
-  border-bottom: 3px solid #DA231D;  /* Add bottom border */
+  color: #802E00;            /* Change text color if desired */
+  border-bottom: 3px solid #802E00;  /* Add bottom border */
 }
 
 .orderproductsearchbutton {
