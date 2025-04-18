@@ -233,81 +233,86 @@ const ProductPage = () => {
         </>
       ) : isViewingDetails ? (
         <>
-          {/* Product Details */}
-          <button
-            className="back-btn"
-            onClick={handleBackToProducts}
-            style={{
-              marginBottom: "20px",
-              cursor: "pointer",
-              border: "none",
-              background: "transparent",
-              fontSize: "20px",
-              color: "#1C2A53",
-            }}
-          >
-            ← Product Details
-          </button>
-          <div className="product-details-container">
-            <div className="product-details-basic">
-              <h2>Basic Information</h2>
-              <p>
-                <span>Name:</span> {selectedProduct.name}
-              </p>
-              <p>
-                <span>Price:</span> {selectedProduct.price}
-              </p>
-              <p>
-                <span>Pattern:</span> {selectedProduct.pattern}
-              </p>
-              <p>
-                <span>Fabric:</span> {selectedProduct.fabric}
-              </p>
-              <p>
-                <span>Category:</span> {selectedProduct.categories}
-              </p>
-              <p>
-                <span>Description:</span> {selectedProduct.description}
-              </p>
-            </div>
-
-            <div className="product-details-images">
-              {selectedProduct.images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`Product Image ${index + 1}`}
-                />
-              ))}
-            </div>
-
-            <div className="product-details-size-quantity">
-              <h3>Size & Quantity</h3>
-              <table className="size-quantity-table">
-                <thead>
-                  <tr>
-                    <th>Size</th>
-                    <th>Quantity</th>
-                  </tr>
-                </thead>
-                <tbody>
+        {/* Product Details - Enhanced */}
+        <button
+          className="back-btn"
+          onClick={handleBackToProducts}
+          style={{
+            marginBottom: "20px",
+            cursor: "pointer",
+            border: "none",
+            background: "transparent",
+            fontSize: "20px",
+            color: "#1C2A53",
+          }}
+        >
+          ← Back to Products
+        </button>
+        
+        <div className="enhanced-product-details">
+          <div className="details-info-section">
+            <h2 className="section-title">Product Details</h2>
+            
+            <div className="details-grid">
+              <div className="detail-item">
+                <span className="detail-label">Name:</span>
+                <span className="detail-value">{selectedProduct.name}</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Price:</span>
+                <span className="detail-value">${selectedProduct.price}</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Pattern:</span>
+                <span className="detail-value">{selectedProduct.pattern}</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Fabric:</span>
+                <span className="detail-value">{selectedProduct.fabric}</span>
+              </div>
+              <div className="detail-item">
+                <span className="detail-label">Category:</span>
+                <span className="detail-value">{selectedProduct.categories}</span>
+              </div>
+              
+              {/* Added Size & Quantity Section */}
+              <div className="detail-item full-width">
+                <span className="detail-label">Availability:</span>
+                <div className="size-quantity-container">
                   {selectedProduct.sizes.map((size, index) => (
-                    <tr key={index}>
-                      <td>{size.size}</td>
-                      <td
-                        className={
-                          size.quantity > 0 ? "in-stock" : "out-of-stock"
-                        }
-                      >
-                        {size.quantity}
-                      </td>
-                    </tr>
+                    <div key={index} className="size-quantity-item">
+                      <span className="size">{size.size}:</span>
+                      <span className={`quantity ${size.quantity > 0 ? 'in-stock' : 'out-of-stock'}`}>
+                        {size.quantity} {size.quantity === 1 ? 'unit' : 'units'}
+                      </span>
+                    </div>
                   ))}
-                </tbody>
-              </table>
+                </div>
+              </div>
+              
+              <div className="detail-item full-width">
+                <span className="detail-label">Description:</span>
+                <p className="detail-value">{selectedProduct.description}</p>
+              </div>
             </div>
           </div>
-        </>
+      
+          <div className="product-images-section">
+            <h3 className="section-title">Product Images</h3>
+            <div className="images-container">
+              {selectedProduct.images.map((image, index) => (
+                <div key={index} className="image-wrapper">
+                  <img 
+                    src={image} 
+                    alt={`Product view ${index + 1}`} 
+                    className="product-detail-image"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </>
       ) : (
         <>
           {/* Add Product Form */}
