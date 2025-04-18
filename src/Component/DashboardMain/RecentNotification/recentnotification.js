@@ -1,46 +1,46 @@
 import React from 'react';
 import './recentnotification.css';
-import product from '../../../assets/productimageforproductpage.png';
+import product from '../../../assets/collectionman.png';
 
 const productsData = [
   {
     id: 1,
     image: product, // Replace with actual image URL
-    name: 'Black & Green Long Kurti top',
-    totalOrders: 506,
+    name: 'Pant',
+    totalOrders: 0,
     totalQuantity: 14,
-    visits: 124.67,
-    price: '12,000',
+    visits: 12,
+    price: '123',
     quantityColor: 'red',
   },
   {
     id: 2,
     image: product,
-    name: 'Black & Green Long Kurti top',
-    totalOrders: 506,
+    name: 'Shirt',
+    totalOrders: 0,
     totalQuantity: 207,
-    visits: 124.67,
-    price: '12,000',
+    visits: 6,
+    price: '501',
     quantityColor: 'green',
   },
   {
     id: 3,
     image: product,
-    name: 'Black & Green Long Kurti top',
-    totalOrders: 506,
-    totalQuantity: 689,
-    visits: 124.67,
-    price: '12,000',
+    name: 'Jacket',
+    totalOrders: 0,
+    totalQuantity: 9,
+    visits: 17,
+    price: '120',
     quantityColor: 'green',
   },
   {
     id: 4,
     image: product,
-    name: 'Black & Green Long Kurti top',
-    totalOrders: 506,
+    name: 'Pant',
+    totalOrders: 0,
     totalQuantity: 14,
-    visits: 124.67,
-    price: '12,000',
+    visits: 124,
+    price: '256',
     quantityColor: 'red',
   },
 ];

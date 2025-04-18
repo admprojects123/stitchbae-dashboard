@@ -172,7 +172,7 @@ const CompanyList = () => {
                                 <th>NAME</th>
                                 <th>EMAIL</th>
                                 <th>NO OF ORDERS</th>
-                                <th>ACTION</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -184,20 +184,7 @@ const CompanyList = () => {
                                     </td>
                                     <td>{company.email}</td>
                                     <td>{company.totalOrders}</td>
-                                    <td>
-                                        <button className="companyList-editBtn">
-                                            <img src={editimg} alt="Action" className="companyList-action-img" />
-                                        </button>
-                                        <button
-                                            className="companyList-deleteBtn"
-                                            onClick={(e) => {
-                                                e.stopPropagation(); // Prevent triggering row click
-                                                setDeletePopup({ show: true, companyId: company._id });
-                                            }}
-                                        >
-                                            <img src={deleteimg} alt="Delete" className="companyList-action-img" />
-                                        </button>
-                                    </td>
+                                  
                                 </tr>
                             ))}
                         </tbody>

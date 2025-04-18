@@ -14,7 +14,7 @@ const MainDashboard = () => {
     <div id="dash-first">
     <Card 
         title="Revenue" 
-        count={721} 
+        count={0} 
         percentageGrowth={4.8} 
         
         graphColor="#2B2EE9" 
@@ -22,21 +22,21 @@ const MainDashboard = () => {
       <Card 
         title="Orders" 
 
-        count={9000} 
+        count={0} 
         percentageGrowth={-4.8} 
         
         graphColor="#FF8A00" 
       />
       <Card 
         title="Visitors" 
-        count={721} 
+        count={15} 
         percentageGrowth={4.8} 
        
         graphColor="#00B74A" 
       />
         <Card 
         title="Conversion" 
-        count={721} 
+        count={71} 
         percentageGrowth={4.8} 
          
         graphColor="#00B74A" 

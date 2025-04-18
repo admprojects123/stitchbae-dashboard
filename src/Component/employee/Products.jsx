@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Products.css";
 import "./AddProduct.css";
-import productimg from "../../assets/productimageforproductpage.png";
+import productimg from "../../assets/collectionman.png";
 import detailsimg from "../../assets/detailsimage.png";
 import pencil from "../../assets/editpencillatest.png";
 import trash from "../../assets/trashbinlatest.png";
@@ -14,7 +14,8 @@ const ProductPage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [sizes, setSizes] = useState([{ size: "M", quantity: 0 }]);
   const [images, setImages] = useState([]);
-  const [products, setProducts] = useState([]); // State to store fetched products
+  const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Fetch products from the API
   useEffect(() => {
@@ -32,7 +33,7 @@ const ProductPage = () => {
     };
 
     fetchProducts();
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []);
 
   const handleCategoryChange = (selectedCategory) => {
     setCategory(selectedCategory);
@@ -118,8 +119,16 @@ const ProductPage = () => {
     setSelectedProduct(null);
   };
 
-  // Filter products based on the active category
-  const filteredProducts = products.filter(product => product.categories === category);
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  // Filter products based on the active category and search term
+  const filteredProducts = products.filter(product => {
+    const matchesCategory = product.categories === category;
+    const matchesSearch = product.name.toLowerCase().includes(searchTerm);
+    return matchesCategory && (searchTerm === "" || matchesSearch);
+  });
 
   return (
     <div className="product-page">
@@ -156,7 +165,9 @@ const ProductPage = () => {
             <input
               type="text"
               className="productsearchbutton"
-              placeholder="Search..."
+              placeholder="Search by product name..."
+              onChange={handleSearchChange}
+              value={searchTerm}
             />
             <button className="add-product-btn" onClick={handleAddProductClick}>
               Add Product
@@ -173,49 +184,50 @@ const ProductPage = () => {
                 <th style={{ textAlign: "left" }}>Total QT</th>
                 <th style={{ textAlign: "left" }}>Status</th>
                 <th style={{ textAlign: "left" }}>Visits</th>
-                <th style={{ textAlign: "left" }}>Action</th>
+                
               </tr>
             </thead>
             <tbody>
-              {filteredProducts.map((product) => (
-                <tr key={product._id}>
-                  <td className="product-info">
-                    <img
-                      src={productimg}
-                      alt={product.name}
-                      className="product-image"
-                    />
-                    <span className="product-name">{product.name}</span>
-                  </td>
-                  <td>
-                    <button
-                      className="view-btn"
-                      onClick={() => handleViewProduct(product)}
+              {filteredProducts.length > 0 ? (
+                filteredProducts.map((product) => (
+                  <tr key={product._id}>
+                    <td className="product-info">
+                      <img
+                        src={productimg}
+                        alt={product.name}
+                        className="product-image"
+                      />
+                      <span className="product-name">{product.name}</span>
+                    </td>
+                    <td>
+                      <button
+                        className="view-btn"
+                        onClick={() => handleViewProduct(product)}
+                      >
+                        View
+                      </button>
+                    </td>
+                    <td>{product.categories}</td>
+                    <td>{product.totalOrders || 0}</td>
+                    <td>{product.sizes.reduce((acc, size) => acc + size.quantity, 0)}</td>
+                    <td
+                      className={`status ${
+                        product.sizes.some(size => size.quantity > 0) ? "in-stock" : "out-of-stock"
+                      }`}
                     >
-                      View
-                    </button>
-                  </td>
-                  <td>{product.categories}</td>
-                  <td>{product.totalOrders || 0}</td>
-                  <td>{product.sizes.reduce((acc, size) => acc + size.quantity, 0)}</td>
-                  <td
-                    className={`status ${
-                      product.sizes.some(size => size.quantity > 0) ? "in-stock" : "out-of-stock"
-                    }`}
-                  >
-                    {product.sizes.some(size => size.quantity > 0) ? "In Stock" : "Out of Stock"}
-                  </td>
-                  <td>{product.visit || 0}</td>
-                  <td className="action-buttons">
-                    <button className="edit-btn">
-                      <img style={{ height: "21px" }} src={pencil} alt="pen" />
-                    </button>
-                    <button className="delete-btn">
-                      <img style={{ height: "21px" }} src={trash} alt="tra" />
-                    </button>
+                      {product.sizes.some(size => size.quantity > 0) ? "In Stock" : "Out of Stock"}
+                    </td>
+                    <td>{product.visit || 0}</td>
+              
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="8" style={{ textAlign: "center", padding: "20px" }}>
+                    No products found matching your search.
                   </td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </>

@@ -1,15 +1,15 @@
 import React from 'react';
 import './recentcustomer.css';
-import productimg from '../../../assets/productimageforproductpage.png';
+import productimg from '../../../assets/collectionman.png';
 
 const TrendingProducts = ({ products = [] }) => {
   // Dummy data if no products are passed
   const dummyProducts = [
-    { name: 'Black & Green Long Kurti top', image: productimg, visits: '12.4k' },
-    { name: 'Black & Green Long Kurti top', image: productimg, visits: '12.4k' },
-    { name: 'Black & Green Long Kurti top', image: productimg, visits: '12.4k' },
-    { name: 'Black & Green Long Kurti top', image: productimg, visits: '12.4k' },
-    { name: 'Black & Green Long Kurti top', image: productimg, visits: '12.4k' },
+    { name: 'Pant', image: productimg, visits: '12' },
+    { name: 'Shirt', image: productimg, visits: '8' },
+    { name: 'Jacket', image: productimg, visits: '11' },
+    { name: 'jacket', image: productimg, visits: '6' },
+    { name: 'Pant', image: productimg, visits: '15' },
   ];
 
   const data = products.length > 0 ? products : dummyProducts;

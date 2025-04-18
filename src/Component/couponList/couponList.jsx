@@ -218,7 +218,7 @@ const CouponList = () => {
                                     <th>Code</th>
                                     <th>Limit</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -239,17 +239,7 @@ const CouponList = () => {
                                         >
                                             {getStatus(coupon.expiryDate)}
                                         </td>
-                                        <td>
-                                            <button className="couponList-editBtn">
-                                                <img src={editimg} alt="Edit" className="couponList-action-img" />
-                                            </button>
-                                            <button
-                                                className="couponList-deleteBtn"
-                                                onClick={() => setDeletePopup({ show: true, couponId: coupon._id })}
-                                            >
-                                                <img src={deleteimg} alt="Delete" className="couponList-action-img" />
-                                            </button>
-                                        </td>
+                    
                                     </tr>
                                 ))}
                             </tbody>
