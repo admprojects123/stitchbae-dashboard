@@ -88,7 +88,7 @@ const ProductPage = () => {
 
     try {
       const response = await axios.post(
-        "https://stitch-commerce-admaya.vercel.app/product/addProduct",
+        "https://stitch-commerce-admaya.onrender.com/product/addProduct",
         formData,
         {
           headers: {
