@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'; // Import Axios
+import axios from 'axios';
 import './couponList.css';
 import deleteimg from '../../assets/deleteimg.png';
 import editimg from '../../assets/action.png';
@@ -10,6 +10,7 @@ const CouponList = () => {
     const [filterDate, setFilterDate] = useState('');
     const [deletePopup, setDeletePopup] = useState({ show: false, couponId: null });
     const [message, setMessage] = useState('');
+    const [toastVisible, setToastVisible] = useState(false);
     const [isAddCouponPage, setIsAddCouponPage] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
@@ -18,7 +19,6 @@ const CouponList = () => {
         expiryDate: ''
     });
 
-    // Fetch coupons from the new API
     useEffect(() => {
         fetch('https://stitch-commerce-admaya.vercel.app/coupon/listCoupons')
             .then(response => response.json())
@@ -35,37 +35,66 @@ const CouponList = () => {
             });
     }, []);
 
+    const showToast = (text) => {
+        setMessage(text);
+        setToastVisible(true);
+        setTimeout(() => {
+            setToastVisible(false);
+            setMessage('');
+        }, 3000);
+    };
     const handleDeleteCoupon = async (couponId) => {
         try {
-            const response = await fetch(`https://stitch-commerce-admaya.vercel.app/coupon/deleteCoupon?id=${couponId}`, {
+            // Log the API request details
+            console.log('Sending DELETE request to delete coupon with ID:', couponId);
+    
+            // Updated API URL format
+            const response = await fetch(`https://stitch-commerce-admaya.vercel.app/coupon/deleteCoupon/${couponId}`, {
                 method: 'DELETE',
             });
+    
+            // Log the response details
+            console.log('API Response:', response);
+    
+            // Check if the response is OK (status 200)
+            if (!response.ok) {
+                showToast(`Failed to delete the coupon. Status: ${response.status}`);
+                console.error('Failed to delete the coupon. Status:', response.status);
+                return;
+            }
+    
+            // Parse the response body (assuming it's JSON)
             const result = await response.json();
+            console.log('API Result:', result);
+    
+            // Handle successful deletion based on the response content
             if (result.message === 'Coupon deleted successfully.') {
+                // Remove the deleted coupon from the state
                 setCoupons(coupons.filter((coupon) => coupon._id !== couponId));
-                setMessage('Coupon deleted successfully!');
+                showToast('Coupon deleted successfully!');
             } else {
-                setMessage('Failed to delete the coupon.');
+                showToast('Failed to delete the coupon.');
             }
         } catch (error) {
-            setMessage(`Error: ${error.message}`);
+            console.error('Error while deleting coupon:', error);
+            showToast(`Error: ${error.message}`);
         } finally {
             setDeletePopup({ show: false, couponId: null });
-            setTimeout(() => setMessage(''), 3000);
         }
     };
+    
 
     const handleAddCoupon = async (e) => {
         e.preventDefault();
         try {
             const response = await axios.post('https://stitch-commerce-admaya.vercel.app/coupon/addCoupon', {
                 name: formData.name,
-                limit: parseInt(formData.limit, 10), // Ensure limit is a number
+                limit: parseInt(formData.limit, 10),
                 description: formData.description,
                 expiryDate: formData.expiryDate
             });
             if (response.data.message === "Coupon added successfully.") {
-                setMessage('Coupon added successfully!');
+                showToast('Coupon added successfully!');
                 setIsAddCouponPage(false);
                 setFormData({
                     name: '',
@@ -73,24 +102,21 @@ const CouponList = () => {
                     description: '',
                     expiryDate: ''
                 });
-                // Refresh the coupon list
                 fetch('https://stitch-commerce-admaya.vercel.app/coupon/listCoupons')
                     .then(response => response.json())
                     .then(data => {
                         if (data.success) {
                             setCoupons(data.coupons);
                         } else {
-                            setMessage('Failed to fetch updated coupons.');
+                            showToast('Failed to fetch updated coupons.');
                         }
                     })
                     .catch(error => console.error("Error fetching coupons:", error));
             } else {
-                setMessage('Failed to add the coupon.');
+                showToast('Failed to add the coupon.');
             }
         } catch (error) {
-            setMessage(`Error: ${error.message}`);
-        } finally {
-            setTimeout(() => setMessage(''), 3000);
+            showToast(`Error: ${error.message}`);
         }
     };
 
@@ -157,16 +183,15 @@ const CouponList = () => {
                         <div className="form-row">
                             <div className="form-group">
                                 <label>Redemption Limit</label>
-                                <select
+                                <input
+                                    type="number"
                                     name="limit"
                                     value={formData.limit}
                                     onChange={handleInputChange}
                                     required
-                                >
-                                    <option value="1">1</option>
-                                    <option value="5">5</option>
-                                    <option value="10">10</option>
-                                </select>
+                                    min="1"
+                                    placeholder="Enter redemption limit"
+                                />
                             </div>
                             <div className="form-group">
                                 <label>Description</label>
@@ -205,8 +230,6 @@ const CouponList = () => {
                         </div>
                     </div>
 
-                    {message && <div className="couponList-message">{message}</div>}
-
                     <div className="couponList-card">
                         <table className="couponList-table">
                             <thead>
@@ -218,7 +241,7 @@ const CouponList = () => {
                                     <th>Code</th>
                                     <th>Limit</th>
                                     <th>Status</th>
-                                    
+                                    <th>Action</th> {/* NEW */}
                                 </tr>
                             </thead>
                             <tbody>
@@ -230,16 +253,21 @@ const CouponList = () => {
                                         <td>{coupon.description}</td>
                                         <td>{coupon.code}</td>
                                         <td>{coupon.limit}</td>
-                                        <td
-                                            className={
-                                                getStatus(coupon.expiryDate) === 'Active'
-                                                    ? 'status-active'
-                                                    : 'status-expired'
-                                            }
-                                        >
+                                        <td className={
+                                            getStatus(coupon.expiryDate) === 'Active'
+                                                ? 'status-active'
+                                                : 'status-expired'
+                                        }>
                                             {getStatus(coupon.expiryDate)}
                                         </td>
-                    
+                                        <td>
+                                            <button
+                                                className="delete-btn-icon"
+                                                onClick={() => setDeletePopup({ show: true, couponId: coupon._id })}
+                                            >
+                                                <img src={deleteimg} alt="Delete" width="18" />
+                                            </button>
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -261,6 +289,13 @@ const CouponList = () => {
                             </button>
                         </div>
                     </div>
+                </div>
+            )}
+
+            {/* Toast Message */}
+            {toastVisible && (
+                <div className="toast-notification">
+                    {message}
                 </div>
             )}
         </div>
